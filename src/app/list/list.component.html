@@ -1,0 +1,58 @@
+<div class="m-5">
+    <h2 class="text-center">Lista de tarefas</h2>
+        <div *ngIf="isEditing" class="mb-3">
+            <label for="inputName" class="form-label">Título</label>
+            <input formControlName="titulo" type="text" class="form-control" id="inputName" aria-describedby="nameHelp">
+            <div id="nameHelp" class="form-text">Digite o título da sua tarefa</div>
+        </div>
+        <div *ngIf="isEditing" class="mb-3">
+            <label for="inputCourse" class="form-label">Descrição</label>
+            <input formControlName="descricao" type="text" class="form-control" id="inputDescricao" aria-describedby="descricaoHelp">
+            <div id="courseHelp" class="form-text">Descreva sua tarefa</div>
+        </div>
+        <div *ngIf="isEditing" class="mb-3">
+          <label for="inputCourse" class="form-label">Prioridade</label>
+          <input formControlName="prioridade" type="text" class="form-control" id="inputDescricao" aria-describedby="descricaoHelp">
+          <div id="courseHelp" class="form-text">Qual o nível de prioridade (baixa, média ou alta)</div>
+        </div>
+        <div class="mb-5 mt-3">
+            <button *ngIf="isEditing" class="btn btn-primary" (click)="update()">
+                Atualizar
+            </button>
+
+            <button *ngIf="isEditing" class="btn btn-danger ms-2" (click)="clear()">
+                Cancelar
+            </button>
+        </div>
+
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Título</th>
+                        <th scope="col">Descrição</th>
+                        <th scope="col">Prioridade</th>
+                        <th scope="col">Alterar</th>
+                        <th scope="col">Remover</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let n of tasks">
+                        <th scope="row">{{n.id}}</th>
+                        <td>{{n.titulo}}</td>
+                        <td>{{n.descricao}}</td>
+                        <td>{{n.prioridade}}</td>
+                        <td><button class="btn btn-danger"
+                                    (click)="delete(n)">
+                                    Remover
+                            </button>
+                        </td>
+                        <td><button class="btn btn-warning"
+                            (click)="onClickUpdate(n)">
+                            Alterar
+                      </button>
+                    </td>
+                    </tr>
+                    </tbody>
+              </table>
+</div>

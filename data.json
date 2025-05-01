@@ -1,0 +1,22 @@
+{
+  "tasksJson": [
+    {
+      "id": 1,
+      "titulo": "Angular",
+      "descricao": "Aprendendo e anotando o passo a passo para a prova.",
+      "prioridade": "Alta"
+    },
+    {
+      "id": 2,
+      "titulo": "Role",
+      "descricao": "Sair com o pessoal ",
+      "prioridade": "média"
+    },
+    {
+      "id": 3,
+      "titulo": "Bolo",
+      "descricao": "Fazer um bolo top demais",
+      "prioridade": "baixa"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+<div class="container bg-light p-4">
+    <div class="row">
+        <div class="col-7 m-auto">
+            <h1 class="text-center">Quais são suas tarefas de hoje?</h1>
+            <form [formGroup]="formGroupTasks">
+                <div class="mb-3">
+                    <label for="inputName" class="form-label">Título</label>
+                    <input formControlName="titulo" type="text" class="form-control" id="inputName" aria-describedby="nameHelp">
+                    <div id="nameHelp" class="form-text">Digite o título da sua tarefa</div>
+                </div>
+                <div class="mb-3">
+                    <label for="inputCourse" class="form-label">Descrição</label>
+                    <input formControlName="descricao" type="text" class="form-control" id="inputDescricao" aria-describedby="descricaoHelp">
+                    <div id="courseHelp" class="form-text">Descreva sua tarefa</div>
+                </div>
+                <div class="mb-3">
+                  <label for="inputCourse" class="form-label">Prioridade</label>
+                  <input formControlName="prioridade" type="text" class="form-control" id="inputDescricao" aria-describedby="descricaoHelp">
+                  <div id="courseHelp" class="form-text">Qual o nível de prioridade (baixa, média ou alta)</div>
+              </div>
+                <button *ngIf="!isEditing" class="btn btn-primary" (click)="save()">
+                  Salvar
+                </button>
+
+                <button *ngIf="isEditing" class="btn btn-primary" (click)="update()">
+                  Atualizar
+                </button>
+
+                <button *ngIf="isEditing" class="btn btn-danger ms-2" (click)="clear()">
+                  Cancelar
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
