@@ -7,16 +7,22 @@
       "prioridade": "Alta"
     },
     {
-      "id": 2,
-      "titulo": "Role",
-      "descricao": "Sair com o pessoal ",
-      "prioridade": "média"
-    },
-    {
       "id": 3,
       "titulo": "Bolo",
       "descricao": "Fazer um bolo top demais",
       "prioridade": "baixa"
+    },
+    {
+      "id": 4,
+      "titulo": "Tomar um cafézinho",
+      "descricao": "descer na cozinha e comer algo. Tomar um café também é top.",
+      "prioridade": "ALTÍSSIMA"
+    },
+    {
+      "id": 5,
+      "titulo": "Almoço",
+      "descricao": "Comer legumes e carne",
+      "prioridade": "alta"
     }
   ]
 }
