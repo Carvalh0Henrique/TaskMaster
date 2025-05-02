@@ -1,6 +1,6 @@
 <form [formGroup]="formGroupTasks">
     <div class="m-5">
-        <h2 class="text-center">Lista de tarefas</h2>
+        <h2 class="text-center fw-bold text-body-emphasis">Lista de tarefas</h2>
             <div *ngIf="isEditing" class="mb-3">
                 <label for="inputName" class="form-label">Título</label>
                 <input formControlName="titulo" type="text" class="form-control" id="inputName" aria-describedby="nameHelp">

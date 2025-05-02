@@ -13,12 +13,6 @@
       "prioridade": "baixa"
     },
     {
-      "id": 4,
-      "titulo": "Tomar um cafézinho",
-      "descricao": "descer na cozinha e comer algo. Tomar um café também é top.",
-      "prioridade": "ALTÍSSIMA"
-    },
-    {
       "id": 5,
       "titulo": "Almoço",
       "descricao": "Comer legumes e carne",
