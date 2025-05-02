@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Task } from '../tasks';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { TaskService } from '../task-service.service';
+import { Prioridade } from '../prioridade';
 
 @Component({
   selector: 'app-tasks',
@@ -10,6 +11,12 @@ import { TaskService } from '../task-service.service';
   styleUrl: './tasks.component.css'
 })
 export class TasksComponent implements OnInit{
+
+  prioridade : Prioridade [] = [
+    {id:1, name: "baixa"},
+    {id:2, name: "média"},
+    {id:3, name: "alta"}
+  ];
   
   tasks: Task[] = [];
   formGroupTasks: FormGroup;

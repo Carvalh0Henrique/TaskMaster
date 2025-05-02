@@ -15,7 +15,11 @@
                 </div>
                 <div class="mb-3">
                   <label for="inputCourse" class="form-label">Prioridade</label>
-                  <input formControlName="prioridade" type="text" class="form-control" id="inputDescricao" aria-describedby="descricaoHelp">
+                  <select class="form-select" formControlName="prioridade" aria-label="Selecione a prioridade" id="prioridade" required>
+                    <option *ngFor="let c of prioridade">
+                      {{c.name}}
+                    </option>
+                  </select>
                   <div id="courseHelp" class="form-text">Qual o nível de prioridade (baixa, média ou alta)</div>
               </div>
                 <button *ngIf="!isEditing" class="btn btn-primary" (click)="save()">

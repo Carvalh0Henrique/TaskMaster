@@ -10,6 +10,7 @@ import { TaskService } from '../task-service.service';
   styleUrl: './list.component.css'
 })
 export class ListComponent {
+
   tasks: Task[] = [];
   formGroupTasks: FormGroup;
   isEditing: boolean = false;
