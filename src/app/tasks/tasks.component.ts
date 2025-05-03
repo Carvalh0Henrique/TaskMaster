@@ -13,9 +13,10 @@ import { Prioridade } from '../prioridade';
 export class TasksComponent implements OnInit{
 
   prioridade : Prioridade [] = [
-    {id:1, name: "baixa"},
-    {id:2, name: "média"},
-    {id:3, name: "alta"}
+    {id:0, name: ""},
+    {id:1, name: "Baixa"},
+    {id:2, name: "Média"},
+    {id:3, name: "Alta"}
   ];
   
   tasks: Task[] = [];

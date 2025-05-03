@@ -1,10 +1,33 @@
 <div class="px-4 py-5 my-5 text-center">
     <h1 class="display-5 fw-bold text-body-emphasis">Bem-vindo ao TaskMaster!</h1>
     <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4">O TaskMaster é um sistema simples e eficiente para gerenciamento de tarefas. Com ele, você pode cadastrar, visualizar, atualizar e excluir tarefas de forma rápida, organizando melhor seu dia a dia.</p>
+      <p class="lead mb-5">O TaskMaster é um sistema simples e eficiente para gerenciamento de tarefas. Com ele, você pode cadastrar, visualizar, atualizar e excluir tarefas de forma rápida, organizando melhor seu dia a dia.</p>
+      
+      <h2 class="fw-bold mb-3">Últimas tarefas:</h2>
+        <div class="mb-5">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">Título</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Prioriadade</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let n of tasks.slice(-3)">
+                    <td>{{n.id}}</td>
+                    <td>{{n.titulo}}</td>
+                    <td>{{n.descricao}}</td>
+                    <td>{{n.prioridade}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+      
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-        <button type="button" class="btn btn-primary btn-lg px-4 gap-3" routerLink="/tasks">📅 Ver todas as tarefas</button>
-        <button type="button" class="btn btn-outline-secondary btn-lg px-4" routerLink="/list">➕ Nova Tarefa</button>
+        <button type="button" class="btn btn-primary btn-lg px-4 gap-3" routerLink="/list">📅 Ver todas as tarefas</button>
+        <button type="button" class="btn btn-outline-secondary btn-lg px-4" routerLink="/tasks">➕ Nova Tarefa</button>
       </div>
     </div>
   </div>

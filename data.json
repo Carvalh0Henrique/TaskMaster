@@ -5,24 +5,6 @@
       "titulo": "Angular",
       "descricao": "Aprendendo e anotando o passo a passo para a prova.",
       "prioridade": "Alta"
-    },
-    {
-      "id": 3,
-      "titulo": "Bolo",
-      "descricao": "Fazer um bolo top demais",
-      "prioridade": "baixa"
-    },
-    {
-      "id": 5,
-      "titulo": "Almoço",
-      "descricao": "Comer legumes e carne",
-      "prioridade": "alta"
-    },
-    {
-      "id": 6,
-      "titulo": "Olá Mundo",
-      "descricao": "Fé",
-      "prioridade": "alta"
     }
   ]
 }
