@@ -27,23 +27,12 @@ export class ListComponent {
   }
 
   ngOnInit(): void {
-    this.loadStudents();
+    this.loadTasks();
   } 
 
-  loadStudents(){
+  loadTasks(){
     this.TaskService.getAll().subscribe({
       next: (json) => { this.tasks = json; }
-      }
-    )
-  }
-
-  save() {
-    this.TaskService.save(this.formGroupTasks.value).subscribe(
-      {
-        next: json => {
-          this.tasks.push(json);
-          this.formGroupTasks.reset();
-        }
       }
     )
   }
@@ -51,7 +40,7 @@ export class ListComponent {
   delete(tasks: Task) {
     this.TaskService.delete(tasks).subscribe(
       {
-        next:() => this.loadStudents()      
+        next:() => this.loadTasks()      
       }
     )
   }
@@ -65,7 +54,7 @@ export class ListComponent {
       this.TaskService.update(this.formGroupTasks.value).subscribe(
         {
           next: () => {
-            this.loadStudents();
+            this.loadTasks();
             this.clear();
           }
         }

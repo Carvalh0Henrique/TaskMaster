@@ -11,6 +11,7 @@ import { ListComponent } from './list/list.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { provideHttpClient } from '@angular/common/http';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { provideHttpClient } from '@angular/common/http';
     FooterComponent,
     HomeComponent,
     TasksComponent,
-    ListComponent
+    ListComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

@@ -25,12 +25,7 @@
                 <button *ngIf="!isEditing" class="btn btn-primary" (click)="save()">
                   Salvar
                 </button>
-
-                <button *ngIf="isEditing" class="btn btn-primary" (click)="update()">
-                  Atualizar
-                </button>
-
-                <button *ngIf="isEditing" class="btn btn-danger ms-2" (click)="clear()">
+                <button class="btn btn-danger ms-2" (click)="clear()">
                   Cancelar
                 </button>
             </form>

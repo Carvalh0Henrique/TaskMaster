@@ -35,10 +35,10 @@ export class TasksComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.loadStudents();
+    this.loadTasks();
   } 
 
-  loadStudents(){
+  loadTasks(){
     this.TaskService.getAll().subscribe({
       next: (json) => { this.tasks = json; }
       }
@@ -54,30 +54,6 @@ export class TasksComponent implements OnInit{
         }
       }
     )
-  }
-
-  delete(tasks: Task) {
-    this.TaskService.delete(tasks).subscribe(
-      {
-        next:() => this.loadStudents()      
-      }
-    )
-  }
-
-  onClickUpdate(tasks: Task) {
-    this.isEditing = true;
-    this.formGroupTasks.setValue(tasks);
-  }
-
-  update() {
-      this.TaskService.update(this.formGroupTasks.value).subscribe(
-        {
-          next: () => {
-            this.loadStudents();
-            this.clear();
-          }
-        }
-      )
   }
 
   clear() {
