@@ -22,6 +22,7 @@ export class TasksComponent implements OnInit{
   tasks: Task[] = [];
   formGroupTasks: FormGroup;
   isEditing: boolean = false;
+  mensagem: string = '';
 
   constructor(private TaskService: TaskService,
               private formBuilder: FormBuilder
@@ -51,6 +52,13 @@ export class TasksComponent implements OnInit{
         next: json => {
           this.tasks.push(json);
           this.formGroupTasks.reset();
+
+          this.isEditing = true
+          this.mensagem = 'Tarefa adicionada com sucesso!';
+
+          setTimeout(() => {
+            this.mensagem = '';
+          }, 3000);
         }
       }
     )

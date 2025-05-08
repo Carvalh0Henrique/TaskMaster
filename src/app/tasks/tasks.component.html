@@ -22,12 +22,15 @@
                   </select>
                   <div id="courseHelp" class="form-text">Qual o nível de prioridade (baixa, média ou alta)</div>
               </div>
-                <button *ngIf="!isEditing" class="btn btn-primary" (click)="save()">
+                <button class="btn btn-primary" (click)="save()">
                   Salvar
                 </button>
                 <button class="btn btn-danger ms-2" (click)="clear()">
                   Cancelar
                 </button>
+                <div *ngIf="mensagem" class="alert alert-success mt-5 text-center fw-bold">
+                  {{ mensagem }}
+                </div>
             </form>
         </div>
     </div>

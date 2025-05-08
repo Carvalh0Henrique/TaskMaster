@@ -38,11 +38,12 @@ export class ListComponent {
   }
 
   delete(tasks: Task) {
-    this.TaskService.delete(tasks).subscribe(
-      {
-        next:() => this.loadTasks()      
-      }
-    )
+    const confirmar = confirm(`Tem certeza que deseja excluir a tarefa "${tasks.titulo}"?`);
+    if (confirmar) {
+      this.TaskService.delete(tasks).subscribe({
+        next: () => this.loadTasks()
+    });
+  }
   }
 
   onClickUpdate(tasks: Task) {
