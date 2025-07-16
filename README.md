@@ -6,7 +6,7 @@
 
 ## 🚀 Tecnologias Utilizadas
 
-- [Angular](https://angular.io/) (vX.X) – Framework para construção da aplicação
+- [Angular](https://angular.io/) (v19.2.10) – Framework para construção da aplicação
 - [TypeScript](https://www.typescriptlang.org/)
 - [Bootstrap](https://getbootstrap.com/) – Para estilização rápida e responsiva
 - HTML e CSS
